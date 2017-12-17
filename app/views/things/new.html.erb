@@ -1,9 +1,11 @@
-<%= form_tag things_path do %>
-  <label>Post title:</label><br>
-  <%= text_field_tag :title %><br>
+<%= form_for(@thing) do |f| %>
+  <%= render 'shared/error_messages' %>
 
-  <label>Post Description</label><br>
-  <%= text_area_tag :description %><br>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
 
-  <%= submit_tag "Submit Post" %>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url, class: 'form-control' %>
+
+  <%= f.submit "Submit Thing", class: "btn btn-primary" %>
 <% end %>

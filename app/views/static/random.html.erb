@@ -10,11 +10,13 @@
 </div>
 
 <%= form_tag votes_path do %>
-  <%= hidden_field :user, :vote, :value => "like" %>
+  <%= hidden_field :user, :vote, :value => true %>
+  <%= hidden_field :user, :thing, :value => @thing.id %>
   <%= image_submit_tag "thumb.png", class:"good_thumb", name:"like", value:"like" %>
 <% end %>
 
 <%= form_tag votes_path do %>
-  <%= hidden_field :user, :vote, :value => "dislike" %>
+  <%= hidden_field :user, :vote, :value => false %>
+  <%= hidden_field :user, :thing, :value => @thing.id %>
   <%= image_submit_tag "thumb.png", class:"bad_thumb", name:"dislike", value:"dislike" %>
 <% end %>
