@@ -15,14 +15,21 @@
         <nav>
           <ul class="nav">
             <li style="float:left"><%= link_to "RANK EVERYTHING", '/', id: "logo" %><li>
-            <li><%= link_to "Log In", "#" %></li>
+            <% if logged_in? %>
+              <li><%= link_to "Users", '#' %></li>
+            <% else %>
+              <li><%= link_to "Log in", login_path %></li>
+            <% end %>
             <li><%= link_to "Add A Thing",   "#" %></li>
-            <li><%= link_to "Top 10", "things/top_ten" %></li>
+            <li><%= link_to "Top 10", things_top_ten_path %></li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
       <%= yield %>
     </div>
   </body>
