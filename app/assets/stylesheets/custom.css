@@ -1,0 +1,126 @@
+body {
+    background-color: #fcefef;
+    font-family: 'Oswald', sans-serif;
+}
+
+li #logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+li #logo:hover {
+  text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5BC5BF;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px 10px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #29938d;
+}
+
+.center {
+  margin: auto;
+  width: 60%;
+}
+
+.center img {
+    border-style: solid;
+    border-width: 20px;
+    border-color: #FFF;
+    box-shadow: 0px 10px 10px #888888;
+    width: 90%;
+}
+
+.qbox {
+  width: auto;
+  border-radius: 20px;
+  background-color: #FFF;
+  color: #29938d;
+  font-size: 2.5em;
+  text-align: center;
+  padding: 10px;
+}
+
+
+.bad_thumb {
+  position: fixed;
+  left: 20%;
+  top: 50%;
+  z-index: 5;
+  text-decoration: none;
+  border-radius: 25%;
+  background-color: #ac4440;
+  padding: 1%;
+  font-size: 2.5em;
+  width: 5%;
+  transform: rotate(180deg);
+}
+
+.good_thumb {
+  position: fixed;
+  right: 20%;
+  top: 50%;
+  z-index: 5;
+  text-decoration: none;
+  border-radius: 25%;
+  background-color: #5bc5bf;
+  padding: 1%;
+  font-size: 2.5em;
+  width: 5%;
+}
+
+.good_thumb:hover {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #fcefef;
+}
+
+.bad_thumb:hover {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #fcefef;
+}
+
+.top_ten {
+  float: left;
+  font-size: 2em;
+  clear: both;
+}
+
+th, td {
+    text-align: left;
+    background-color: #fff;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+table {
+  width: 100%;
+}

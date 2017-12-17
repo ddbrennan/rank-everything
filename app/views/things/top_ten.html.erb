@@ -1,0 +1,19 @@
+<div class="center">
+  <br>
+<table class="rankings">
+  <tr>
+    <th>Rank</th>
+    <th>Thing</th>
+    <th>% Liked</th>
+  </tr>
+
+
+<% @things.each_with_index do |thing, rank| %>
+  <tr>
+    <td><%= rank + 1 %></td>
+    <td><%= thing.name %></td>
+    <td><%= thing.pct_rating %></td>
+<% end %>
+
+</table>
+</div>
