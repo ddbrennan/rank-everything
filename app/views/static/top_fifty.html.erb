@@ -11,7 +11,7 @@
 <% @things.each_with_index do |thing, rank| %>
   <tr>
     <td><%= rank + 1 %></td>
-    <td><%= thing.name %></td>
+    <td><%= link_to thing.name, thing_path(thing) %></td>
     <td><%= thing.pct_rating %></td>
 <% end %>
 

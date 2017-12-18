@@ -12,8 +12,8 @@ class Thing < ActiveRecord::Base
     total > 0 ? (100 * (good.to_f / total.to_f)).round(2) : 0
   end
 
-  def self.top_ten
-    self.all.sort_by {|thing| thing.pct_rating}.reverse[0..9]
+  def self.top_fifty
+    self.all.sort_by {|thing| thing.pct_rating}.reverse[0..49]
   end
 
 end

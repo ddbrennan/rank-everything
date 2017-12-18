@@ -22,8 +22,20 @@ class ThingsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    @thing = Thing.find(params[:id])
+    @thing.destroy
+    redirect_to '/things'
+  end
 
+  def edit
+    @thing = Thing.find(params[:id])
+  end
+
+  def update
+    @thing = Thing.find(params[:id])
+    @thing.update(name: params[:thing][:name], image_url: params[:thing][:image_url])
+    redirect_to thing_path(@thing)
   end
 
   private

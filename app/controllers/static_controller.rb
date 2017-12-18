@@ -1,7 +1,7 @@
 class StaticController < ApplicationController
 
-  def top_ten
-    @things = Thing.top_ten
+  def top_fifty
+    @things = Thing.top_fifty
   end
 
   def random

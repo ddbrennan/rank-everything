@@ -1,6 +1,9 @@
 <% provide(:title, "home") %>
-
+<div class="center">
 <% @things.each do |thing| %>
-  <%= link_to thing.name, thing_path(thing) %>
-  <!-- DELETE BUTTON -->
+  <p><%= link_to thing.name, thing_path(thing), class: "toplink" %>
+  <% if current_user.email == "test@test.com" %>
+    <%= link_to "delete", thing_path(thing), method: :delete %></p><br>
+  <% end %>
 <% end %>
+</div>

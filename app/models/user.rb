@@ -9,4 +9,12 @@ class User < ActiveRecord::Base
 
   has_many :votes
   has_many :things, through: :votes
+
+  def likes
+    self.votes.select {|vote| vote.good}
+  end
+
+  def dislikes
+    self.votes.select {|vote| !vote.good}
+  end
 end

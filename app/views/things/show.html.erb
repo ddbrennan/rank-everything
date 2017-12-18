@@ -1,4 +1,10 @@
+<br>
 <div class="center">
-<%= @thing.name %>
-<img src=<%= @thing.image_url %> width="400">
+  <h1 class="big"><%= @thing.name %></h1>
+  <img src=<%= @thing.image_url %> width="400">
+  <h2 class="big"><%= @thing.pct_rating %>% rating from <%= @thing.votes.count %> votes.</h2>
 </div>
+
+<% if current_user.email == "test@test.com" %>
+  <%= link_to "Update", edit_thing_path(@thing), class: "center button" %></p><br>
+<% end %>

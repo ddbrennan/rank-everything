@@ -16,12 +16,12 @@
           <ul class="nav">
             <li style="float:left"><%= link_to "RANK EVERYTHING", '/', id: "logo" %><li>
             <% if logged_in? %>
-              <li><%= link_to "Users", current_user %></li>
+              <li><%= link_to "Account", current_user %></li>
             <% else %>
               <li><%= link_to "Log in", login_path %></li>
             <% end %>
             <li><%= link_to "Add A Thing",   '/things/new' %></li>
-            <li><%= link_to "Top 10", '/top_ten' %></li>
+            <li><%= link_to "Top 50", '/top_fifty' %></li>
           </ul>
         </nav>
       </div>

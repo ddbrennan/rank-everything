@@ -1,5 +1,22 @@
 <br>
 <div class="center">
-<h2><%= @user.name %> | <%= @user.email %></h2>
+  <h2><%= @user.name %> | <%= @user.email %></h2>
+  <%= link_to "Log Out", logout_path, method: :delete, class: 'logout' %>
+  <div class="col">
+    <h2>Likes</h2>
+    <ol>
+    <% @user.likes.each do |like| %>
+      <br><li><%= like.thing.name if like.thing %></li><br>
+    <% end %>
+    </ol>
+  </div>
+
+  <div class="col">
+    <h2>Disikes</h2>
+    <ol>
+    <% @user.dislikes.each do |dislike| %>
+      <br><li><%= dislike.thing.name if dislike.thing %></li><br>
+    <% end %>
+    </ol>
+  </div>
 </div>
-<%= link_to "Log Out", logout_path, method: :delete %>

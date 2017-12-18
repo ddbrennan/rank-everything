@@ -121,6 +121,101 @@ th, td {
     padding: 10px;
 }
 
+td a {
+  text-decoration: none;
+  color: #5BC5BF;
+}
+
+td a:hover {
+  color: #29938d;
+}
+
 table {
   width: 100%;
+}
+
+.col {
+  float: left;
+  width: 40%;
+}
+
+.col li {
+  text-align: left;
+  float: left;
+}
+
+.logout {
+  text-decoration: none;
+  color: white;
+  background-color: #ac4440;
+  padding: 1%;
+}
+
+.big {
+  font-size: 3em;
+  display: block;
+  text-align: center;
+}
+
+.button {
+  text-decoration: none;
+  color: white;
+  background-color: #5bc5bf;
+  padding: 2%;
+  margin: auto;
+  display: block;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #29938d;
+}
+
+label {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 2em;
+}
+
+.form-control {
+  display: block;
+  margin: auto;
+  width: 100%;
+  font-size: 2em;
+  border: none;
+}
+
+input.button {
+  border: none;
+  padding: 1%;
+  font-size: 1.5em;
+  font-family: 'Oswald', sans-serif;
+}
+
+.alert {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 1%;
+  background-color: #ac4440;
+  color: #fff;
+}
+
+#error_explanation ul {
+  background-color: transparent;
+}
+
+#error_explanation ul li {
+  float: left;
+  clear: both;
+}
+
+.toplink {
+  text-decoration: none;
+  color: #5BC5BF;
+}
+
+.toplink:hover {
+  color: #29938d;
 }

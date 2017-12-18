@@ -2,7 +2,7 @@
 
 <div class="center">
   <div class="qbox">
-      <%= @thing.name %>
+      <%= link_to @thing.name, @thing, class: "toplink" %>
   </div><br>
   <div class="center">
     <img src=<%= @thing.image_url %>>
